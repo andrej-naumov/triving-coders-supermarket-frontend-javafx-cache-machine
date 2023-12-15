@@ -41,11 +41,6 @@ public class CacheMachineLoginController {
         } else {
             // TODO: connect to database please to check username and password
             if(username.getText().equals("admin") && password.getText().equals("admin123")){
-                alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Information Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Successfully Login");
-
                 loginBtn.getScene().getWindow().hide();
 
                 Parent root = FXMLLoader.load(getClass().getResource("cache-machine-dashboard.fxml"));
@@ -54,7 +49,6 @@ public class CacheMachineLoginController {
 
                 stage.setScene(scene);
                 stage.show();
-                alert.show();
             } else {
                 alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error Message");
