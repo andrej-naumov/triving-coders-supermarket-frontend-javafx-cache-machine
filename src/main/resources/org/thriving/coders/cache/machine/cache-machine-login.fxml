@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.thriving.coders.cache.machine.CacheMachineLoginController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutY="2.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: ccc;">
+               <children>
+                  <FontAwesomeIcon fill="#506194" glyphName="USERS" layoutX="99.0" layoutY="142.0" selectionEnd="10" selectionStart="10" size="8em" />
+                  <Label layoutX="40.0" layoutY="200.0" text="Thriving Coders Cache Machine">
+                     <font>
+                        <Font name="Tahoma Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="300.0" layoutY="5.0" prefHeight="400.0" prefWidth="300.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="78.0" text="Welcome back!" textFill="#506194">
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="40.0" layoutY="138.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" />
+                  <PasswordField fx:id="password" layoutX="40.0" layoutY="188.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" />
+                  <Button fx:id="loginBtn" layoutX="40.0" layoutY="244.0" mnemonicParsing="false" onAction="#loginEmployee" prefHeight="40.0" prefWidth="220.0" text="Login" />
+                  <Button fx:id="close" layoutX="234.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" AnchorPane.bottomAnchor="373.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="#d32222" glyphName="CLOSE" size="1.2em" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
