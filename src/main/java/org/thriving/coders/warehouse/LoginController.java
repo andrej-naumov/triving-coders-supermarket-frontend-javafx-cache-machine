@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class LoginController {
 
@@ -48,14 +49,14 @@ public class LoginController {
             if(username.getText().equals("admin") && password.getText().equals("admin123")){
                 loginBtn.getScene().getWindow().hide();
 
-                alert = new Alert(Alert.AlertType.INFORMATION);
+/*                alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Information Message");
                 alert.setHeaderText(null);
                 alert.setContentText("Successfully Login");
                 alert.showAndWait();
-
-
-                Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+*/
+// new FXMLLoader(LoginController.class.getResource("dashboard.fxml")).load();
+                Parent root = new FXMLLoader(LoginController.class.getResource("dashboard.fxml")).load();
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
 
