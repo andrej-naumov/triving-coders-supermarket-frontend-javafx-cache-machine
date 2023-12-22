@@ -10,6 +10,6 @@ module org.thriving.coders.cashe.machine.cashemachine {
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
 
-    opens org.thriving.coders.cache.machine to javafx.fxml;
-    exports org.thriving.coders.cache.machine;
+    opens org.thriving.coders.warehouse to javafx.fxml;
+    exports org.thriving.coders.warehouse;
 }
