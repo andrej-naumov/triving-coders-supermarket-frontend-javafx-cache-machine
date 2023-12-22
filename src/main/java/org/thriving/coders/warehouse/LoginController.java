@@ -55,7 +55,7 @@ public class LoginController {
                 alert.showAndWait();
 
 
-                Parent root = FXMLLoader.load(getClass().getResource("cache-machine-dashboard.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
 
