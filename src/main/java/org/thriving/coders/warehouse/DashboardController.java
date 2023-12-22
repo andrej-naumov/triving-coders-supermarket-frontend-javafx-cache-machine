@@ -59,9 +59,9 @@ public class DashboardController implements Initializable {
 
         try {
             if (option.get().equals(ButtonType.OK)){
-
+                // TODO logout with session destroy + backup for goods
                 logout.getScene().getWindow().hide();
-// new FXMLLoader(Application.class.getResource("login.fxml"));
+
                 Parent root = new FXMLLoader(DashboardController.class.getResource("login.fxml")).load();
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
