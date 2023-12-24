@@ -1,4 +1,4 @@
-module org.thriving.coders.cashe.machine.cashemachine {
+module org.thriving.coders.warehouse {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -9,6 +9,7 @@ module org.thriving.coders.cashe.machine.cashemachine {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
+    requires lombok;
 
     opens org.thriving.coders.warehouse to javafx.fxml;
     exports org.thriving.coders.warehouse;

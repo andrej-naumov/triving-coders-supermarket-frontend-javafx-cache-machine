@@ -1,21 +1,30 @@
 package org.thriving.coders.warehouse;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
+    @FXML
+    private Button add_items;
+
+    @FXML
+    private Button out_items;
+
     @FXML
     private Button go_scan_item_barcode;
 
@@ -23,16 +32,19 @@ public class DashboardController implements Initializable {
     private TextField input_item_barcode;
 
     @FXML
-    private TableColumn<?, ?> item_barcode;
+    private TableView<Item> items_table_view;
 
     @FXML
-    private TableColumn<?, ?> item_category;
+    private TableColumn<Item, Integer> item_id;
 
     @FXML
-    private TableColumn<?, ?> item_id;
+    private TableColumn<Item, String> item_barcode;
 
     @FXML
-    private TableColumn<?, ?> item_name;
+    private TableColumn<Item, String> item_name;
+
+    @FXML
+    private TableColumn<Item, String> item_category;
 
     @FXML
     private AnchorPane item_scan_barcode;
@@ -42,6 +54,8 @@ public class DashboardController implements Initializable {
 
     @FXML
     private Button logout;
+
+    private ObservableList<Item> items;
 
     private double x = 0;
     private double y = 0;
@@ -89,8 +103,43 @@ public class DashboardController implements Initializable {
 
     }
 
+    public ObservableList<Item> addItem() {
+
+        ObservableList<Item> items = FXCollections.observableArrayList();
+
+        items.add(new Item(2952516, "4607943497865", "Яйцо куриное с3 (с/п) (охлажденное, 90)", "Продукты питания (folder)/Яйцо куриное" ));
+        items.add(new Item(2952518, "4607943497902", "Яйцо куриное св /20шт/ (с/п) (охлажденное, 90)", "Продукты питания (folder)/Яйцо куриное"));
+
+        return items;
+    }
+
+    public void showItems() {
+        items = addItem();
+
+        item_id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        item_barcode.setCellValueFactory(new PropertyValueFactory<>("barcode"));
+        item_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        item_category.setCellValueFactory(new PropertyValueFactory<>("category"));
+
+        items_table_view.setItems(items);
+    }
+
+
+    public void switchForm(ActionEvent event) {
+
+        if(event.getSource() == add_items) {
+            // TODO get form add items to warehouse
+        } else if (event.getSource() == out_items) {
+            // TODO get form out items from warehouse
+        }
+    }
+
+    public void displayItems() {
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        showItems();
     }
 }

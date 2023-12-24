@@ -47,12 +47,12 @@
                                     <Font name="Tahoma Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="17.0" layoutY="206.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="+ add items">
+                              <Button fx:id="add_items" layoutX="17.0" layoutY="206.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="+ add items">
                                  <font>
                                     <Font name="Tahoma Bold" size="14.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="19.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="- out items">
+                              <Button fx:id="out_items" layoutX="19.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="- out items">
                                  <font>
                                     <Font name="Tahoma Bold" size="14.0" />
                                  </font>
@@ -82,7 +82,7 @@
                         </AnchorPane>
                         <AnchorPane fx:id="item_scan_barcode" layoutX="1.0" layoutY="1.0" prefHeight="550.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <TableView layoutX="14.0" layoutY="58.0" prefHeight="308.0" prefWidth="620.0">
+                              <TableView fx:id="items_table_view" layoutX="14.0" layoutY="58.0" prefHeight="308.0" prefWidth="620.0">
                                 <columns>
                                   <TableColumn fx:id="item_id" prefWidth="75.0" text="item id" />
                                   <TableColumn fx:id="item_barcode" prefWidth="148.0" text="barcode" />
